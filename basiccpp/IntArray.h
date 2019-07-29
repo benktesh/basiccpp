@@ -1,6 +1,8 @@
 #pragma once
 
-#include <ostream>
+#include <iostream>
+using namespace std;
+
 class IndexOutOfBoundException {};
 
 class IntArray {
@@ -60,5 +62,23 @@ public:
 		return (index >= 0 && index < m_size);
 	}
 };
+
+//Free functions
+ostream& operator<<(ostream& os, const IntArray& a) {
+	os << "[";
+	for (int i = 0; i < a.Size(); i++) {
+		os << a[i];
+	}
+	os << "]";
+	return os;
+}
+
+void printArray(IntArray& a) {
+	cout << "[";
+	for (int i = 0; i < a.Size(); i++) {
+		cout << a[i];
+	}
+	cout << "]";
+}
 
 
