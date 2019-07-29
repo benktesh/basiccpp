@@ -6,12 +6,33 @@
 #include <ostream>
 #include "IntArray.h"
 #include "Array.hpp"
+#include "Stack.hpp"
+
 
 
 int main()
 {
 	
+	Stack<int> stack{ 10 };
+	assert(stack.IsEmpty());
+
+	cout << stack;
+
+	stack.Push(10);
+	stack.Push(20);
+	stack.Push(15);
+
+	cout << stack;
+
+	int x = stack.Pop();
+	cout << x; 
+	cout << stack;
+	cout << stack;
+
+	 
 	
+
+	/*
 	Array<int> myArray{ 5 };
 	for (int i = 0; i < 5; i++) {
 		myArray[i] = i; 
@@ -36,6 +57,7 @@ int main()
 	printArray(a);
 
     std::cout << "Hello World!\n"; 
+	*/
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
