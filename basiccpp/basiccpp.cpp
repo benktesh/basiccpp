@@ -17,6 +17,8 @@ int main()
 		myArray[i] = i; 
 	}
 	
+	myArray.print();
+
 	for (int i = 0; i < 5; i++) {
 		cout << myArray[i] << endl;
 	}

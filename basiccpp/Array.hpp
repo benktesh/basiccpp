@@ -60,4 +60,18 @@ public:
 		throw IndexOutOfBoundException{};
 	}
 
+	
+
+	void print() const {
+		std::cout << "[";
+		for (int i = 0; i < m_size; i++) {
+			std::cout << m_ptr[i];
+		}
+		std::cout << "]" << endl;
+	}
+
+
 };
+
+
+//Free functions
