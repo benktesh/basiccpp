@@ -3,9 +3,24 @@
 
 #include "pch.h"
 #include <iostream>
+#include <ostream>
+#include "IntArray.h"
+
+
 
 int main()
 {
+	IntArray a{ 5 };
+	for (int i = 0; i < 5; i++) {
+		a[i] = i;
+	}
+
+
+	IntArray b = a;
+	printArray(b);
+	cout << endl;
+	printArray(a);
+
     std::cout << "Hello World!\n"; 
 }
 
