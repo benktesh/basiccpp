@@ -12,22 +12,30 @@
 
 int main()
 {
-	
-	Stack<int> stack{ 10 };
-	assert(stack.IsEmpty());
+	try {
+		int initialSize = 3;
+		Stack<int> stack{ initialSize };
+		assert(stack.IsEmpty());
+		assert(stack.MaxSize() == initialSize);
 
-	cout << stack;
 
-	stack.Push(10);
-	stack.Push(20);
-	stack.Push(15);
+		cout << stack;
 
-	cout << stack;
+		stack.Push(10);
+		stack.Push(20);
+		stack.Push(15);
+		stack.Push(11);
 
-	int x = stack.Pop();
-	cout << x; 
-	cout << stack;
-	cout << stack;
+		cout << stack;
+
+		int x = stack.Pop();
+		cout << x;
+		cout << stack;
+
+	}
+	catch (const StackOverflowException& e) {
+		cout << "\n *** Stock Overflow Detected ***\n\n";
+	}
 
 	 
 	

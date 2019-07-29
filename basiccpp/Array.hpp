@@ -74,6 +74,10 @@ public:
 		std::cout << "]" << endl;
 	}
 
+	int Size() const {
+		return m_size;
+	}
+
 
 };
 

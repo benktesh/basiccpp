@@ -2,3 +2,5 @@
 /basiccpp/.vs/basiccpp/v15/.suo
 /basiccpp/.vs/*
 /.vs/*.*
+/basiccpp/x64/Debug
+/basiccpp/basiccpp.sln.DotSettings.user

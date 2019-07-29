@@ -5,6 +5,9 @@
 #include <ostream>
 #include "Array.hpp"
 
+
+class StackOverflowException {};
+
 template <typename T>
 class Stack {
 
@@ -18,6 +21,10 @@ public:
 		, m_top{ -1 } {}
 	
 	void Push(const T& element) {
+
+		if (Size() >= MaxSize()) {
+			throw StackOverflowException{};
+		}
 		m_top++;
 		m_array[m_top] = element;
 	}
@@ -38,6 +45,10 @@ public:
 
 	bool IsEmpty() const {
 		return Size() == 0; 
+	}
+
+	int MaxSize() const {
+		return m_array.Size();  
 	}
 
 
