@@ -22,6 +22,10 @@ private:
 
 public:
 	Array() = default;
+	~Array() {
+		delete[] m_ptr;  
+		m_ptr = nullptr;
+	}
 
 	//Constructor to create an array of defined size
 	explicit Array(int size) {
