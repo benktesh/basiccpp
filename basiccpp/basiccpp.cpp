@@ -5,11 +5,23 @@
 #include <iostream>
 #include <ostream>
 #include "IntArray.h"
-
+#include "Array.hpp"
 
 
 int main()
 {
+	
+	
+	Array<int> myArray{ 5 };
+	for (int i = 0; i < 5; i++) {
+		myArray[i] = i; 
+	}
+	
+	for (int i = 0; i < 5; i++) {
+		cout << myArray[i] << endl;
+	}
+
+
 	IntArray a{ 5 };
 	for (int i = 0; i < 5; i++) {
 		a[i] = i;
