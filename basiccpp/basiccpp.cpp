@@ -7,11 +7,40 @@
 #include "IntArray.h"
 #include "Array.hpp"
 #include "Stack.hpp"
+#include "LinkedList.hpp"
+#include "Array.cpp"
 
 
 
 int main()
 {
+	//Try linkedList
+
+	LinkedList<int> l{};
+
+	cout << "Created list: " << l << endl;
+	l.InsertHead(10);
+	l.InsertHead(64);
+	l.InsertHead(80);
+	l.InsertHead(77);
+	cout << "Current list: " << l << endl;
+
+	auto pos = l.Find(64);
+
+	l.InsertAfter(pos, 500);
+	cout << "Current list: " << l << endl;
+	cout << "Removing Head. "<< endl;
+	l.RemoveHead();
+	cout << "Current list: " << l << endl;
+
+	cout << "Clear List. " << endl;
+	l.Clear();
+	cout << "Current list: " << l << endl;
+
+	int initialSize = 3;
+	Stack<int> mStack{ initialSize };
+
+	/*
 	try {
 		int initialSize = 3;
 		Stack<int> stack{ initialSize };
@@ -34,13 +63,14 @@ int main()
 
 	}
 	catch (const StackOverflowException& e) {
+		cout << &e << endl;
 		cout << "\n *** Stock Overflow Detected ***\n\n";
 	}
-
+	*/
 	 
 	
-
 	/*
+	
 	Array<int> myArray{ 5 };
 	for (int i = 0; i < 5; i++) {
 		myArray[i] = i; 
@@ -66,6 +96,7 @@ int main()
 
     std::cout << "Hello World!\n"; 
 	*/
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

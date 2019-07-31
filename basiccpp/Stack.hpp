@@ -62,6 +62,7 @@ public:
 			os << "    " << stack.m_array[i] << "\n";
 		}
 		os << "\n";
+		return os;
 	}
 	
 };
