@@ -14,8 +14,17 @@
 
 int main()
 {
-	//Try linkedList
 
+
+	int size = 5;
+	Array<int> mArray{ size };
+	for (int i = 0; i < size; i++) {
+		mArray[i] = i;
+	}
+	 
+
+	//Try linkedList
+	/*
 	LinkedList<int> l{};
 
 	cout << "Created list: " << l << endl;

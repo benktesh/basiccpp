@@ -35,6 +35,7 @@ template <class T>
 Array<T>::~Array() {
 	delete[] m_ptr;
 	m_ptr = nullptr;
+	std::cout << "Deleted" << std::endl;
 }
 
 
@@ -76,3 +77,10 @@ T Array<T>::operator[](int index) const {
 	}
 	throw IndexOutOfBoundsException{};
 }
+
+template <class T>
+bool Array<T>::IsEmpty() const {
+	return (m_size == 0);
+}
+
+ 
