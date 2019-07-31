@@ -4,3 +4,5 @@
 /.vs/*.*
 /basiccpp/x64/Debug
 /basiccpp/basiccpp.sln.DotSettings.user
+/basicTest/Debug/*
+/basiccpp/TestResults/*
