@@ -1,9 +1,10 @@
 #include "Order.h"
 
+using std::make_shared;
+
 void Order::SetDiscount(int amt)
 {
-	delete discount; 
-	discount = new Discount(amt);
+	discount = make_shared<Discount>(amt); 
 }
 
 int Order::GetDiscountAmount()
@@ -14,8 +15,5 @@ int Order::GetDiscountAmount()
 	return 0;
 }
 
-Order::~Order()
-{
-	delete discount;
-}
+//no need to delete
 

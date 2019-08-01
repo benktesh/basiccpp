@@ -4,21 +4,20 @@
 #include "pch.h"
 #include <iostream>
 #include <ostream>
-#include "IntArray.h"
-#include "Array.hpp"
-#include "Stack.hpp"
-#include "LinkedList.hpp"
-#include "Array.cpp"
-#include "Order.h"
+#include "Order.h";
 
 
 
 int main()
 {
 
-
 	Order o;
 	o.SetDiscount(5);
+	o.SetDiscount(10);
+
+	Order p = o;
+	p.SetDiscount(11);
+
 	int d = o.GetDiscountAmount();
 
 }

@@ -1,10 +1,11 @@
 #pragma once
 #include "Discount.h"
+#include <memory>
 class Order {
 private:
-	Discount* discount = nullptr;
+	std::shared_ptr<Discount> discount;  //include <memory>
 public:
 	void SetDiscount(int amt);
 	int GetDiscountAmount();
-	~Order();
+	//~Order(); //no need for a destructor
 };
