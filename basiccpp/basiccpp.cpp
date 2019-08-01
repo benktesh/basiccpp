@@ -9,6 +9,7 @@
 #include "Stack.hpp"
 #include "LinkedList.hpp"
 #include "Array.cpp"
+#include "Order.h"
 
 
 
@@ -16,96 +17,10 @@ int main()
 {
 
 
-	int size = 5;
-	Array<int> mArray{ size };
-	for (int i = 0; i < size; i++) {
-		mArray[i] = i;
-	}
-	 
+	Order o;
+	o.SetDiscount(5);
+	int d = o.GetDiscountAmount();
 
-	//Try linkedList
-	/*
-	LinkedList<int> l{};
-
-	cout << "Created list: " << l << endl;
-	l.InsertHead(10);
-	l.InsertHead(64);
-	l.InsertHead(80);
-	l.InsertHead(77);
-	cout << "Current list: " << l << endl;
-
-	auto pos = l.Find(64);
-
-	l.InsertAfter(pos, 500);
-	cout << "Current list: " << l << endl;
-	cout << "Removing Head. "<< endl;
-	l.RemoveHead();
-	cout << "Current list: " << l << endl;
-
-	cout << "Clear List. " << endl;
-	l.Clear();
-	cout << "Current list: " << l << endl;
-
-	int initialSize = 3;
-	Stack<int> mStack{ initialSize };
-
-	/*
-	try {
-		int initialSize = 3;
-		Stack<int> stack{ initialSize };
-		assert(stack.IsEmpty());
-		assert(stack.MaxSize() == initialSize);
-
-
-		cout << stack;
-
-		stack.Push(10);
-		stack.Push(20);
-		stack.Push(15);
-		stack.Push(11);
-
-		cout << stack;
-
-		int x = stack.Pop();
-		cout << x;
-		cout << stack;
-
-	}
-	catch (const StackOverflowException& e) {
-		cout << &e << endl;
-		cout << "\n *** Stock Overflow Detected ***\n\n";
-	}
-	*/
-	 
-	
-	/*
-	
-	Array<int> myArray{ 5 };
-	for (int i = 0; i < 5; i++) {
-		myArray[i] = i; 
-	}
-	
-	myArray.print();
-
-	for (int i = 0; i < 5; i++) {
-		cout << myArray[i] << endl;
-	}
-
-
-	IntArray a{ 5 };
-	for (int i = 0; i < 5; i++) {
-		a[i] = i;
-	}
-
-
-	IntArray b = a;
-	printArray(b);
-	cout << endl;
-	printArray(a);
-
-    std::cout << "Hello World!\n"; 
-	*/
-	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
