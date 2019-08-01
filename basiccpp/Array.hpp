@@ -26,4 +26,3 @@ public:
 	int Size() const;
 	bool IsValidIndex(int index) const;
 };
-
